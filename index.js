@@ -217,8 +217,8 @@ const start = async () => {
         // app.listen(port, () => console.log(`Server running on port ${port}...`));
 
         const httpsOptions = {
-            key: fs.readFileSync(path.resolve(__dirname, '../localhost-key.pem')),
-            cert: fs.readFileSync(path.resolve(__dirname, '../localhost.pem'))
+            key: fs.readFileSync(path.resolve(__dirname, './localhost-key.pem')),
+            cert: fs.readFileSync(path.resolve(__dirname, './localhost.pem'))
         };
         https.createServer(httpsOptions, app).listen(port, () => {
             console.log(`Express API server running on https://localhost:${port}`);
